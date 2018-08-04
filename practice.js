@@ -18,7 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+function first(arr){
+  return arr[0];
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +35,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+function last(arr){
+  return arr[arr.length -1];
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +52,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper(family){
+  for(let i = 0; i < family.length; i++){
+    alert(family[i]);
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +71,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+function reversedLooper(letters){
+  for(let i = letters.length - 1; i >= 0; i--){
+    alert(letters[i])
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +90,9 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+function evenFinder(nums){
+  return nums.filter((num) => num % 2 === 0)
+}
 
 
 
@@ -106,7 +120,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+function divider(numbersArray){
+  let evens = [];
+  let odds = [];
+  for(let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evens.push(numbersArray[i])
+    }else{
+      odds.push(numbersArray[i])
+    }
+  }
+  return [evens, odds]
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -127,7 +152,9 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+function finder(arr){
+  return arr.includes(getRandomArbitrary())
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -156,7 +183,27 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(myGroceryList, item){
+  if(myGroceryList && item){
+    for(let i = 0; i < myGroceryList.length; i++){
+      if (myGroceryList[i] === item){
+        myGroceryList.splice(i, 1);
+      }
+      return myGroceryList;
+    }
+  }else{
+    return [];
+  }
+}
 
+function addItem(myGroceryList, item){
+  if(myGroceryList && item){
+    myGroceryList.push(item);
+    return myGroceryList;
+  }else{
+    return [];
+  }
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -166,7 +213,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker(){
+  let array = []
+  for(let i = 1; i <= 215; i++){
+    array.push(i)
+  }
+  return array;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -182,7 +235,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(numbers){
+  let newNums = numbers.map(num => {
+    return parseInt(num) + 10;
+  })
+  return newNums;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -207,7 +265,12 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1;
+  }
+  return arr2;
+}
 
 
 /*
@@ -219,7 +282,15 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function both(arr1, arr2){
+  var newArr = []
+  for(let i = 0; i < arr1.length; i++){
+    if(arr2.includes(arr1[i])){
+      newArr.push(arr1[i]);
+    }
+  }
+return newArr;
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -259,7 +330,8 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees = [tyler, cahlan, ryan, colt];
+console.log(devMountainEmployees.length);
 
 
 /*
@@ -268,6 +340,12 @@ var colt = {
 */
 
 //Code Here
+
+  for(let i = 0; i < devMountainEmployees.length; i++){
+    if(devMountainEmployees[i] === cahlan){
+      devMountainEmployees.splice(i, 1);
+    }
+  }
 
 
 
@@ -280,7 +358,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = [];
 
 
 /*
@@ -299,7 +377,20 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Test',
+  email: 'fghjj@gmail.com',
+  password: 'yuio',
+  username: 'hjl'
+};
+var user3 = {
+  name: 'Whatever',
+  email: 'asfs@gmail.com',
+  password: 'vbm',
+  username: 'zxv'
+};
 
+users = [user1, user2, user3];
 
 
 /*
@@ -313,7 +404,11 @@ var user1 = {
 */
 
 //Code Here
-
+for(var i = 0; i < users.length; i++){
+  if(users[i].email === 'tylermcginnis33@gmail.com'){
+    users.splice(i, 1);
+  }
+}
 
 
 /*
